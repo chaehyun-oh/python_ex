@@ -1,16 +1,13 @@
 #예제01. 기초함수
 #숫자 n을 받아 세제곱 결과를 반환하는 함수 cube를 정의하시오.  cube 함수를 호출하여 12의 세제곱 결과를 출력하시오
-from itertools import count
-
 
 print('예제01')
 
 
 def cube(n):
-    return n*n*n
+    return n**3
 
-n = 12
-print(cube(n))
+print(cube(12))
 
 
 #예제 02. 기초 함수
@@ -78,11 +75,24 @@ for char in word:
 print(word2)
 
 
-#문제 12. 문자열 조작하기2
+#문제 13. 문자열 조작하기2
 #주어진 문자열 word가 주어질 때, 해당 단어를 역순으로 뒤집은 결과를 출력하시오.
 print('\n문제13')
 
 word = 'apple'
+
 word_rvs = word[::-1]
 print(word_rvs)
 
+#print(' '.join(reversed(word)))
+
+word2 = ''
+for char in word:
+    word2 = char + word2
+print(word2)
+
+#알고리즘 문제푸는 방식에 익숙해지는 방식...인덱스 조율
+word2 = ''
+for i in range(len(word)):
+    print(word[len(word)-i-1], end='')
+    #end 기본값 \n 을 공백으로 변경해서 한 줄로 출력

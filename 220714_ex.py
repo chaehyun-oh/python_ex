@@ -108,7 +108,7 @@ for char in word:
 print('\n문제18')
 
 word = 'banana'
-apb = {'a':0,'b':0,'n':0}
+apb = {}
 
 for char in word:
     apb[char] += 1

@@ -1,22 +1,27 @@
-# import sys
+import sys
 
-# sys.stdin = open("input.txt", "r")
+sys.stdin = open("input.txt", "r")
+#제출시에는 위에 주석처리 or 제외
+#표준입출력...
 
 
 #SWEA-2029-몫과 나머지 출력하기
-# a, b = map(int, input().split())
+T = int(input())
 
-# for i in range(n):
-
-# print(f'{i}',a//b, a%b)
-
+for test_case in range(1, T + 1):
+    a, b = map(int, input().split())
+    print(f'#{test_case}',a//b, a%b)
+    
 
 #SWEA-1545-거꾸로 출력
 
-n = int(input())
+T = int(input())
 
-for i in range(n+1):
-    print(n-i)
+for test_case in range(1, T + 1):
+    a = int(input())
+
+    for i in range(a+1):
+        print(a-i)
     
 
 #SWEA-2071-평균값 구하기
@@ -27,15 +32,16 @@ for i in range(n+1):
 
 
 #SWEA-2070-큰 놈, 작은 놈, 같은 놈
+T = int(input())
 
-a, b = map(int, input().split())
-
-if a > b:
-    print('>')
-elif a < b:
-    print('<')
-elif a == b:
-    print('=')
+for test_case in range(1, T + 1):
+    a, b = map(int, input().split())
+    if a > b:
+        print('>')
+    elif a < b:
+        print('<')
+    elif a == b:
+        print('=')
 
 
 #문제20. 각 자릿수의 합 구하기
@@ -48,6 +54,15 @@ while n:
     n //= 10
     
 print(s)
+
+#풀이-divmod()
+number = 123
+result = 0
+
+number, remainder = divmod(number, 10)
+result += remainder
+
+print(result)
 
 
 #문제21. 숫자 뒤집기
@@ -68,3 +83,24 @@ for j in rr:
     i -= 1
     new_n += j*(10**i)
 print(new_n)
+
+
+#풀이
+#str
+number = 123
+print(str(number)[::-1])
+
+#
+#number 123 = 1*100 + 2*10 + 3
+#이전 결과값에 10을 곱하고 나머지를 더해주기
+number = 123
+result = 0
+
+while number:
+    #이전 결과에 10 곱하기
+    result*= 10
+    #나머지 더하기
+    result += number%10
+    #number 깎기
+    number //= 10
+print(result)

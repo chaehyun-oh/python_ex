@@ -1,6 +1,6 @@
 import sys
 
-sys.stdin = open("input.txt", "r")
+sys.stdin = open("./swea_input/input.txt", "r")
 #제출시에는 위에 주석처리 or 제외
 #표준입출력...
 

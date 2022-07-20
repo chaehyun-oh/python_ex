@@ -26,8 +26,16 @@ for test_case in range(1, T + 1):
 
 #SWEA-2071-평균값 구하기
 
-# nums = list(input())
+# T = int(input())
 
+# for test_case in range(1, T + 1):
+#     
+#     nums = int(input())
+#   mxm = nums[0]
+#     한 줄씩 최댓값 구하기
+#   for i in nums:
+#       if mxm < i:
+#           mxm = i
 
 
 

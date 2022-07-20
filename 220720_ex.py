@@ -51,8 +51,7 @@ sys.stdin = open("./swea_input/0720input.txt", "r")
 T = int(input())
 
 for test_case in range(1, T + 1):
-    a = 0
-    b = 0
+    
     p, q, r, s, w = map(int, input().split())
 
     a = p * w
@@ -61,7 +60,10 @@ for test_case in range(1, T + 1):
     if w <= r:
         b = q
     else:
-        b = q + (s * (w-r))
+        b = q + s * (w - r)
+    #삼항연산자로 바꿀수 도 있음
+    #b = q if w <= r else q+s*(w-r)
+
     #B사의 경우
     #요금 w <= r 일 경우 = q , w> r 일 경우 = s * w
 
@@ -69,3 +71,5 @@ for test_case in range(1, T + 1):
         print(f'#{test_case}', b)
     elif a < b:
         print(f'#{test_case}', a)
+
+    #또는 print(f'#{test_case} {min(a, b)}')

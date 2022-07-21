@@ -38,10 +38,10 @@ sys.stdin = open("./swea_input/0720input.txt", "r")
 #     n = int(input())
 #     for i in range(1, n+1):
 #         if i % 2 == 0:
-#             s = s - i
+#             s -= i
 
 #         else:
-#             s = s + i
+#             s += i
 
 #     print(f'#{test_case}', s)
 

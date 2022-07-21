@@ -21,7 +21,7 @@ sys.stdin = open("./swea_input/0721input.txt", "r")
 #                 n2 += 1
 
 #             if set(nums) == s:
-#                 print(f'#{test_case}', n2*i)
+#                 print(f'#{test_case}', n*i)
 #                 nums = []
 #                 break
 #             else:
@@ -40,6 +40,29 @@ sys.stdin = open("./swea_input/0721input.txt", "r")
 #             else:
 #                 continue
                 
+#풀이---------
+#while 후 리스트 해서 카운트 1이상 증가 안하게 하거나 T/F 또는인덱스 0~9 순서에 맞게 +1
+#또는 set에 추가해서 set의 길이가 10이 될 떄 까지
+#받은 숫자를 자릿수로 보기 위해 문자열로 순회하면서 set에 추가
+
+T = int(input())
+for test_case in range(1, T + 1):
+    n = int(input())
+    n1 = n
+    numbers = set()
+    
+    while True:
+        for i in str(n):
+            numbers.add(i)
+        if len(numbers) == 10:
+            break
+        n += n1
+
+    print(f'#{test_case} {n}')
+    
+
+
+
 
 #SWEA-1989 초심자의 회문 검사
 
